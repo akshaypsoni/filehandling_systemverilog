@@ -5,13 +5,13 @@ Using File Handling, you can perform your file I/O directly from Verilog/SystemV
 
 You can write Verilog/SystemVerilog code to read stimulus files to apply patterns to the inputs of a model.
 
-interger file_handler;  //File pointer to access the file
+interger file_handler;      //File pointer to access the file
 
-int r;                  //Return status of function
+int r;                      //Return status of function
 
-int position;           //Position of cursor in the file
+int position;               //Position of cursor in the file
 
-string line_str;        //String for read line
+string line_str;            //String for read line
 
 1. File Opening function:
 
