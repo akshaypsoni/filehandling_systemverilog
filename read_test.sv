@@ -10,7 +10,7 @@ module file_read;
 
 	initial
 	begin
-		fd = $fopen("file_name.txt", "r");      //opens the file in read mode
+		fd = $fopen("test_inputs.txt", "r");      //opens the file in read mode
 		$display("value of fd %0d" , fd);       //Displaying file handler value
 		r = $fseek(fd, 0, 1);	                //Change the position in the file
 		pos = $ftell(fd);                       //Return current position in the file
