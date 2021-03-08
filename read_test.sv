@@ -1,3 +1,5 @@
+//SystemVerilog code for reading data from text file as a test vector inputs for verification
+
 module file_read;
 
 	integer fd;			//file handler
