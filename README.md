@@ -37,7 +37,9 @@ string line_str;        //String for read line
 
     r = $fgets(line_str, file_handler);
 
-
+Important Note:
+1) Whenever we are using $fseek, It takes "\n" newline character as 2 Bytes.
+2) Whenever we are using $fgets, It reads "\n" newline character as 1 Byte.
 
 
 
