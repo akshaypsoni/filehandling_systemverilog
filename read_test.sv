@@ -38,7 +38,12 @@ module file_read;
 			//Extracting 8 bytes data stream from the line
 			foreach(line[j])
 			begin
-				s = {line[j],line[j+1],line[j+2],line[j+3],line[j+4],line[j+5],line[j+6],line[j+7]};  //Concatenate the 8 characters into 8 Bytes data
+				//s = {line[j],line[j+1],line[j+2],line[j+3],line[j+4],line[j+5],line[j+6],line[j+7]};  //Concatenate the 8 characters into 8 Bytes data
+				//Check for length of complete line is less than current index + 8 bits data frame
+				if(l<j+8)
+					s = line.substr(j,l-1);		//return new string from current index to last index
+				else
+					s = line.substr(j,j+7);		//return new string from current index(j) to data frame(j+7) 
 				data_hex = s.atohex();		                                                      //convert string data to hex value
 				$display("data[%d]: %h",j,data_hex);                                                  //Displaying data stream
 				j = j+7;
