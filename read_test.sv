@@ -8,6 +8,7 @@ module file_read;
 	int l;        			//length of line
 	int i,j;
 	string line;  			//String to store read data
+	string s;
 	bit [7:0][3:0]data_hex; 	//final data stream each of 8 bits
 
 	initial
